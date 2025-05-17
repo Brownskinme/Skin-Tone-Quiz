@@ -1,5 +1,4 @@
-``html
-    body {
+body {
         font-family: 'Montserrat', sans-serif;
         background: var(--background);
         color: var(--text);
@@ -773,41 +772,3 @@
             3: null,
             4: null,
             5: null
-        };
-        
-        // Reset selected options
-        const options = document.querySelectorAll('.option-card');
-        options.forEach(option => option.classList.remove('selected'));
-        
-        // Hide results and show pending message
-        resultsContent.classList.add('hidden');
-        resultsPending.classList.remove('hidden');
-        
-        // Hide scroll to results button
-        scrollToResultsBtn.style.display = 'none';
-        
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Scroll to results
-    function scrollToResults() {
-        document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Initialize the quiz when page loads
-    window.onload = initQuiz;
-</script>
-    // Set the source to your hosted quiz
-    iframe.src = 'https://yourdomain.com/brownskin-quiz-v6.html'; // Replace with your actual URL
-    
-    // Add iframe to container
-    document.getElementById('brownskin-quiz-embed').appendChild(iframe);
-    
-    // Make iframe responsive
-    window.addEventListener('message', function(event) {
-        if (event.data.type === 'quiz-height') {
-            iframe.style.height = event.data.height + 'px';
-        }
-    }, false);
-})();
