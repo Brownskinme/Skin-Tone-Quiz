@@ -1,0 +1,381 @@
+``html
+ body {
+ font-family: 'Montserrat', sans-serif;
+ background: var(--background);
+ color: var(--text);
+ min-height: 100vh;
+ }
+ 
+h1, h2, h3, h4 {
+ font-family: 'Cormorant Garamond', serif;
+ }
+ 
+.option-card {
+ transition: all 0.3s ease;
+ cursor: pointer;
+ border: 1px solid rgba(139, 90, 43, 0.2);
+ }
+ 
+.option-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(139, 90, 43, 0.15);
+ border-color: var(--secondary);
+ }
+ 
+.selected {
+ border: 2px solid var(--secondary);
+ background-color: rgba(212, 175, 55, 0.1);
+ transform: translateY(-5px);
+ }
+ 
+.skin-tone {
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ margin: 0 auto;
+ border: 3px solid #fff;
+ box-shadow: 0 4px 15px rgba(139, 90, 43, 0.2);
+ }
+ 
+.product-card {
+ transition: all 0.3s ease;
+ border: 1px solid rgba(139, 90, 43, 0.2);
+ }
+ 
+.product-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(139, 90, 43, 0.15);
+ border-color: var(--secondary);
+ }
+ 
+.color-swatch {
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ margin: 0 auto;
+ border: 2px solid #fff;
+ box-shadow: 0 2px 8px rgba(139, 90, 43, 0.15);
+ }
+ 
+.gold-gradient {
+ background: linear-gradient(135deg, #D4AF37 0%, #F9F295 50%, #D4AF37 100%);
+ }
+ 
+.btn-primary {
+ background: linear-gradient(135deg, var(--accent), var(--secondary));
+ color: white;
+ transition: all 0.3s ease;
+ }
+ 
+.btn-primary:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 5px 15px rgba(139, 90, 43, 0.3);
+ }
+ 
+.quiz-container {
+ background-color: white;
+ border-radius: 20px;
+ box-shadow: 0 10px 30px rgba(139, 90, 43, 0.1);
+ }
+ 
+.result-badge {
+ display: inline-block;
+ padding: 8px 16px;
+ border-radius: 20px;
+ font-size: 14px;
+ font-weight: 600;
+ margin-right: 8px;
+ margin-bottom: 8px;
+ }
+ 
+.scripture-box {
+ background-color: rgba(212, 175, 55, 0.1);
+ border-left: 4px solid var(--secondary);
+ padding: 15px;
+ margin: 20px 0;
+ font-style: italic;
+ }
+ 
+.affirmation-box {
+ text-align: center;
+ font-weight: 500;
+ font-size: 1.1rem;
+ padding: 15px;
+ margin: 20px 0;
+ color: var(--primary);
+ }
+ 
+.season-badge {
+ display: inline-block;
+ padding: 6px 12px;
+ border-radius: 15px;
+ font-size: 13px;
+ margin-right: 6px;
+ margin-bottom: 6px;
+ }
+ 
+.question-section {
+ position: relative;
+ padding: 30px;
+ margin-bottom: 30px;
+ border-radius: 20px;
+ background-color: white;
+ box-shadow: 0 5px 20px rgba(139, 90, 43, 0.1);
+ }
+ 
+.question-number {
+ position: absolute;
+ top: -15px;
+ left: 30px;
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: var(--secondary);
+ color: white;
+ border-radius: 50%;
+ font-weight: bold;
+ box-shadow: 0 3px 10px rgba(139, 90, 43, 0.2);
+ }
+ 
+.divider {
+ height: 3px;
+ background: linear-gradient(90deg, var(--accent), var(--secondary), var(--accent));
+ border-radius: 3px;
+ margin: 50px 0;
+ }
+ 
+.fade-in {
+ animation: fadeIn 0.5s ease-in;
+ }
+ 
+@keyframes fadeIn {
+ from { opacity: 0; }
+ to { opacity: 1; }
+ }
+ 
+.sparkle {
+ position: absolute;
+ pointer-events: none;
+ width: 20px;
+ height: 20px;
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10 0L12.5 7.5L20 10L12.5 12.5L10 20L7.5 12.5L0 10L7.5 7.5L10 0Z' fill='%23D4AF37'/%3E%3C/svg%3E");
+ background-size: contain;
+ animation: sparkle 1.5s linear infinite;
+ opacity: 0;
+ }
+ 
+@keyframes sparkle {
+ 0% { transform: scale(0); opacity: 0; }
+ 50% { transform: scale(1); opacity: 1; }
+ 100% { transform: scale(0); opacity: 0; }
+ }
+ 
+.scroll-to-results {
+ position: fixed;
+ bottom: 30px;
+ right: 30px;
+ z-index: 100;
+ padding: 15px;
+ border-radius: 50%;
+ box-shadow: 0 5px 15px rgba(139, 90, 43, 0.3);
+ display: none;
+ }
+ 
+/* Embed container styles */
+ #brownskin-quiz-container {
+ width: 100%;
+ max-width: 1000px;
+ margin: 0 auto;
+ border-radius: 20px;
+ overflow: hidden;
+ }
+
+ 
+
+Answer All Questions Below
+ 
+Your personalized results will appear at the bottom of the page
+ 
+
+
+
+
+1
+ 
+Which best describes your skin's overall tone?
+ 
+
+
+Deep, rich dark brown with cool undertones
+ 
+
+
+Rich, reddish-brown with warm undertones
+ 
+
+
+Medium-deep brown with golden undertones
+ 
+
+
+Medium brown with warm yellow undertones
+ 
+
+
+Light to medium brown with neutral undertones
+ 
+
+
+Light brown with golden beige undertones
+ 
+
+
+
+
+
+
+2
+ 
+How does your skin react to the sun?
+ 
+
+
+Rarely burns, tans easily and evenly
+ 
+
+
+Sometimes burns, then develops a deep tan
+ 
+
+
+Rarely burns, but can develop uneven tone
+ 
+
+
+Never burns, tans very deeply
+ 
+
+
+
+
+
+
+3
+ 
+What color are the veins on your wrist?
+ 
+
+
+Greenish or olive
+ 
+
+
+Blue or purple
+ 
+
+
+A mix of both or hard to tell
+ 
+
+
+
+
+
+
+4
+ 
+Which jewelry metals look best against your skin?
+ 
+
+
+Gold or bronze
+ 
+
+
+Silver or platinum
+ 
+
+
+Both look equally good
+ 
+
+
+Rose gold
+ 
+
+
+
+
+
+
+5
+ 
+What's your main skincare concern?
+ 
+
+
+Uneven skin tone or dark spots
+ 
+
+
+Dryness or lack of glow
+ 
+
+
+Oiliness or texture issues
+ 
+
+
+Sensitivity or redness
+ 
+
+
+Hyperpigmentation
+ 
+
+
+
+
+
+
+
+
+
+Your Results
+ 
+Please answer all questions above to see your personalized results.
+ 
+
+
+
+
+
+
+
+© 2023 BrownSkin.me - Version 6.0
+ 
+Created with ❤️ for beautiful BrownSkin
+ 
+
+
+
+
+👇
+
+
+
+ // Set the source to your hosted quiz
+ iframe.src = 'https://brownskin.me/b/B1iKF'; // Replace with your actual URL
+ 
+// Add iframe to container
+ document.getElementById('brownskin-quiz-embed').appendChild(iframe);
+ 
+// Make iframe responsive
+ window.addEventListener('message', function(event) {
+ if (event.data.type === 'quiz-height') {
+ iframe.style.height = event.data.height + 'px';
+ }
+ }, false);
+})();
